@@ -27,6 +27,12 @@ app.use(flash())
 // Routing
 app.use('/users', usersRouter)
 
+
+// Home entry
+app.get("/", (req, res) => {
+    res.send('<title>Welcome to app</title><h1>Welcome to app</h1><a href="http://localhost:3000/users">Start here!</a>');
+});
+
 // Catching 404 & 4rward 2 error handler
 app.use( function(req, res, next) {
     next(createError(404))
