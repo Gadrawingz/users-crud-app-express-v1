@@ -5,7 +5,6 @@ let session = require('express-session')
 let createError = require('http-errors')
 
 let usersRouter = require('./routes/users')
-let DBconn = require('./libs/database')
 let app = express()
 let port = 3000;
 
